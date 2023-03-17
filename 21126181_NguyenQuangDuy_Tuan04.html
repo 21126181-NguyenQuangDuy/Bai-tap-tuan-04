@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            #container{
+                display: flex;
+                width: 1440px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            #left{
+                border: 1px solid rgb(234, 234, 234);
+                border-width: 0 1px 0 0;
+                flex-direction: column;
+                width: 92px;
+                display: flex;
+                justify-content: space-between;
+                height: 870px;
+            }
+            #above{
+                flex-direction: column;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                margin-top: -30px;
+            }
+            #below{
+                flex-direction: column;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .item{
+                margin-top: 50px;
+                width: 32px;
+            }
+            #setting{
+                margin-top: 36px;
+            }
+            #center{
+                width: 910px;
+                border: 1px solid rgb(234, 234, 234);
+                border-width: 0 1px 0 0;
+            }
+            #right{
+                width: 440px;
+            }
+            #title{
+                margin-left: 40px;
+                display: flex;
+                justify-content: space-between;
+                text-align: center;
+                font-size: 18px;
+                margin-bottom: 35px;
+            }
+            #time{
+                border: 2px solid red;
+                width: 90px;
+                height: 20px;
+                text-align: center;
+                color: red;
+                border-radius: 30px;
+                padding: 7px;
+                margin-top: 40px;
+                margin-right: 40px;
+            }
+            #line2{
+                display: flex;
+                height: 30px;
+                font-size: 14px;
+            }
+            #internal{
+                display: flex;
+                justify-content: center;
+                border: 1px solid rgb(255, 112, 160);
+                width: 80px;
+                background-color: rgb(255, 112, 160);
+                color: aliceblue;
+                border-radius: 20px;
+                margin-left: 40px;
+                padding: 5px;
+            }
+            #line2_right{
+                display: flex;
+                align-items: center;
+                
+            }
+            .calender{
+                margin-left: 15px;
+                border: 3px solid rgb(234, 234, 234);
+                border-width: 0 2px 0 0;
+                padding-right: 15px;
+            }
+            .line2_time{
+                margin-left: 15px;
+            }
+            #center_2{
+                margin:32px 40px 0 40px;
+            }
+            #line_img{
+                display: flex;
+                justify-content: space-between;
+                margin-top: -450px;
+                padding: 0 20px 0 20px;
+            }
+            #line_img_text{
+                display: flex;
+                align-items: center;
+                background: rgba(0,0,0,0.5);
+                color: #ffffff;
+                text-align: center;
+                border-radius: 10px;
+                height: 35px;
+                width: 165px;
+                padding-left: 5px;
+            }
+            #center_3{
+                display: flex;
+                margin: 430px 20px 0 25px;
+                justify-content: space-around;
+            }
+            #center3_item_line1{
+                display: flex;
+                justify-content: space-between;
+                margin-top: -158px;
+                padding-left: 8px;
+                padding-right: 8px;
+                align-items: center;
+            }
+            #center_3_img_text{
+                display: flex;
+                align-items: center;
+                background: rgba(0,0,0,0.5);
+                text-align: center;
+                border-radius: 10px;
+                height: 28px;
+                width: 105px;   
+                font-size: 13px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                color: #ffffff;
+            }
+            #center_4{
+                display: flex;
+                margin: 150px 200px 0 200px;
+                justify-content: space-around;
+            }
+            .center_4_item{
+                height: 44px;
+                padding-left: 15px;
+            }
+            #buttonEnd{
+                background: red;
+                color: #ffffff;
+                margin: 0 0 0 15px;
+                height: 44px;
+                text-align: center;
+                border-radius: 5px;
+                width: 125px;
+            }
+            #right{
+                margin: 20px 30px 0 35px;
+            }
+            #rightAbove{
+                display: flex;
+                flex-direction: column;
+                border: 1px solid rgb(230, 230, 230);
+                border-width: 0 0 1px 0;
+                height: 335px;
+            }
+            #rightAbove_title{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 14px;
+                margin-bottom: 35px;
+            }
+            #add{
+                border: 2px solid red;
+                width: 70px;
+                text-align: center;
+                border-radius: 5px;
+                color: red;
+                padding: 7px;
+            }
+            #rightAbove_line1{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 12px;
+            }
+            #rightAbove_line1_left{
+                display: flex;
+            }
+            #rightAbove_line1_right{
+                display: flex;
+                height: 20px;
+                width: 90px;
+                justify-content: space-around;
+            }
+            #rightAbove_text{
+                font-size: 20px;
+                font-weight: 600;
+                color: gray;
+                text-align: center;
+            }
+            #chat_line1{
+                display: flex;
+                align-items: center;
+            }
+            .chat_line1_item{
+                padding-right: 10px;
+            }
+            #chat_line1_time{
+                font-size: 12px;
+                color: rgb(150, 150, 150);
+            }
+            #chat_line2{
+                background-color: rgb(242, 241, 241);
+                margin-left: 50px;
+                border-radius: 10px;
+                padding: 5px;
+                margin-bottom: 30px;
+            }
+            #chat_line3{
+                background-color: rgb(255, 225, 230);
+                width:80px;
+                margin-left: 50px;
+                border-radius: 10px;
+                padding: 10px;
+                margin-bottom: 30px;
+            }
+            #input{
+                width: 325px;
+                height: 40px;
+                border-radius: 10px;
+                border: 1px solid rgb(242, 242, 242);
+                background-color: rgb(242, 242, 242);
+                margin-top: 5px;
+            }
+            #chat_line4{
+                display: flex;
+                justify-content: space-between;
+            }
+            #icon{
+                margin-top: 5px;
+                margin-left: -50px;
+                font-size: 30px;
+            }
+            #so{
+                background-color: rgb(255, 221, 225);
+                color: red;
+                padding: 5px;
+                font-size: 14px;
+                width: 10px;
+                text-align: center;
+                border-radius: 10px;
+                margin-left: -120px;
+            }
+            #n_thongbao{
+                color: #ffffff;
+                background-color: red;
+                text-align: center;  
+                font-size: 14px;
+                height: 18px;
+                width: 18px;
+                border-radius: 20px;
+                border: 2px solid #ffffff;
+                margin-top: -40px;
+                margin-left: 20px;
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="container">
+                <div id="left">
+                    <div id="above">
+                        <img class="item" src="img_Tuan04/logo.png" alt="logo" style="width: 50px;">
+                        <img class="item" src="img_Tuan04/home.png" alt="">
+                        <div>
+                            <img class="item" src="img_Tuan04/chatting.png" alt="">
+                            <div id="n_thongbao">N</div>
+                        </div>
+                        <img class="item" src="img_Tuan04/calender.png" alt="">
+                        <img class="item" src="img_Tuan04/cam.png" alt="">
+                        <img class="item" src="img_Tuan04/user.png" alt="">
+                    </div>
+                    <div id="below">
+                        <img src="img_Tuan04/avatar.png" alt="" width="44px">
+                        <img id="setting" src="img_Tuan04/setting.png" alt="" width="44px">
+                    </div>
+                </div>
+                <div id="center">
+                    <div id="title">
+                        <h1 style="font-size: 22px; margin: 0; padding-top: 40px;">Meeting title</h1>
+                        <div id="time"><p style="margin-top: -2px;">&#9679; 12:00</p></div>
+                    </div>
+                    <div id="line2">
+                        <div id="internal">
+                            <div><img src="img_Tuan04/user.png" alt="" width="15px" style="padding-right: 5px;"></div>
+                            <div>Internal</div>
+                        </div>
+                        <div id="line2_right" class="calender">
+                            <div><img src="img_Tuan04/calender_small.png" alt="" width="15px"></div>
+                            <div> Sep 02, 2022</div>
+                        </div>
+                        <div id="line2_right" class="line2_time">
+                            08:00 - 09:00 AM
+                        </div>
+                    </div>
+                    <div id="center_2">
+                        <div><img src="img_Tuan04/img_big.png" alt=""></div>
+                        <div id="line_img">
+                            <div id="line_img_text"><p style="padding: 5px; color:rgb(37, 232, 37)">&#9679;</p><p style="margin-top: 15px;"> Benjamin Crawford</p></div>
+                            <div><img src="img_Tuan04/mic_color.png" alt=""></div>
+                        </div>
+                    </div>
+                    <div id="center_3">
+                        <div class="center_3_item">
+                            <div><img src="img_Tuan04/img2.png" alt=""></div>
+                            <div id="center3_item_line1">
+                                <div id="center_3_img_text"><p style="padding: 5px; color:rgb(37, 232, 37)">&#9679;</p><p style="margin-top: 13px;">Christian Scott</p></div>
+                                <div><img src="img_Tuan04/mic_grey_color.png" alt="" width="25px"></div>
+                            </div>
+                        </div>
+                        <div class="center_3_item">
+                            <div><img src="img_Tuan04/img1.png" alt=""></div>
+                            <div id="center3_item_line1">
+                                <div id="center_3_img_text"><p style="padding: 5px; color:rgb(37, 232, 37)">&#9679;</p><p style="margin-top: 13px;">Deborah Chu</p></div>
+                                <div><img src="img_Tuan04/mic_grey_color.png" alt="" width="25px"></div>
+                            </div>
+                        </div>
+                        <div class="center_3_item">
+                            <div><img src="img_Tuan04/img.png" alt=""></div>
+                            <div id="center3_item_line1">
+                                <div id="center_3_img_text"><p style="padding: 5px; color:rgb(37, 232, 37)">&#9679;</p><p style="margin-top: 13px;">Jordan Nieves</p></div>
+                                <div><img src="img_Tuan04/mic_grey_color.png" alt="" width="25px"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="center_4">
+                        <img class="center_4_item" src="img_Tuan04/mic_grey_color.png" alt="">
+                        <img class="center_4_item" src="img_Tuan04/cam_color.png" alt="">
+                        <img class="center_4_item" src="img_Tuan04/speaker_grey_color.png" alt="">
+                        <div  id="buttonEnd"><p style="margin: 13px 0 13px 0;">End meeting</p></div>
+                        <img class="center_4_item" src="img_Tuan04/Button 2179.png" alt="">
+                        <img class="center_4_item" src="img_Tuan04/share.png" alt="">
+                        <img class="center_4_item" src="img_Tuan04/vv.png" alt="">
+                    </div>
+                </div>
+                <div id="right">
+                    <div id="rightAbove">
+                        <div id="rightAbove_title">
+                            <div><h1 style="margin: 0; font-size: 25px;">Participants</h1></div>
+                            <div id="so">4</div>
+                            <div id="add">+ Add</div>
+                        </div>
+                        <div id="rightAbove_line1">
+                            <div id="rightAbove_line1_left">
+                                <img src="img_Tuan04/avatar 1322.png" alt="" height="44px">
+                                <p style="padding-left: 10px;">Benjamin Crawford</p>
+                            </div>
+                            <div id="rightAbove_line1_right">
+                                <img src="img_Tuan04/mic1.png" alt="">
+                                <img src="img_Tuan04/cam_small.png" alt="">
+                                <div id="rightAbove_text">...</div>
+                            </div>
+                        </div>
+                        <div id="rightAbove_line1">
+                            <div id="rightAbove_line1_left">
+                                <img src="img_Tuan04/avatar 1323.png" alt="" height="44px">
+                                <p style="padding-left: 10px;">Christian Scott</p>
+                            </div>
+                            <div id="rightAbove_line1_right">
+                                <img src="img_Tuan04/mic1.png" alt="">
+                                <img src="img_Tuan04/cam_small.png" alt="">
+                                <div id="rightAbove_text">...</div>
+                            </div>
+                        </div>
+                        <div id="rightAbove_line1">
+                            <div id="rightAbove_line1_left">
+                                <img src="img_Tuan04/avatar 1324.png" alt="" height="44px">
+                                <p style="padding-left: 10px;">Deborah Chu</p>
+                            </div>
+                            <div id="rightAbove_line1_right">
+                                <img src="img_Tuan04/mic2.png" alt="">
+                                <img src="img_Tuan04/cam_small.png" alt="">
+                                <div id="rightAbove_text">...</div>
+                            </div>
+                        </div>
+                        <div id="rightAbove_line1">
+                            <div id="rightAbove_line1_left">
+                                <img src="img_Tuan04/avatar 1325.png" alt="" height="44px">
+                                <p style="padding-left: 10px;">Jordan Nieves</p>
+                            </div>
+                            <div id="rightAbove_line1_right">
+                                <img src="img_Tuan04/mic1.png" alt="">
+                                <img src="img_Tuan04/cam_small.png" alt="">
+                                <div id="rightAbove_text">...</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="rightBelow">
+                        <div><h1 style="margin-top: 30px; margin-bottom: 30px;">Chat</h1></div>
+                        <div id="chat_line1">
+                            <img class="chat_line1_item" src="img_Tuan04/avatar 1326.png" alt="">
+                            <div class="chat_line1_item"><b>Deborah Chu</b></div>
+                            <div class="chat_line1_item" id="chat_line1_time">1:12 PM</div>
+                        </div>
+                        <div id="chat_line2">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos facilis sint amet
+                        </div>
+                        <div id="chat_line1">
+                            <img class="chat_line1_item" src="img_Tuan04/avatar 1327.png" alt="">
+                            <div class="chat_line1_item"><b>Jordan Nieves</b></div>
+                            <div class="chat_line1_item" id="chat_line1_time">1:12 PM</div>
+                        </div>
+                        <div id="chat_line2">
+                            Euismod laborum culpa est magna cillum sint in elit proident magna anim consecte
+                        </div>
+                        <div id="chat_line1">
+                            <img class="chat_line1_item" src="img_Tuan04/avatar 1328.png" alt="">
+                            <div class="chat_line1_item"><b>Benjamin Crawford</b></div>
+                            <div class="chat_line1_item" id="chat_line1_time">1:12 PM</div>
+                        </div>
+                        <div id="chat_line3">
+                            &#128536; &#128536; &#128536;
+                        </div>
+                        <div id="chat_line1">
+                            <img class="chat_line1_item" src="img_Tuan04/avatar 1329.png" alt="">
+                            <div class="chat_line1_item"><b>Christian Scott</b></div>
+                        </div>
+                        <div id="chat_line4">
+                            <input  id="input" type="text" placeholder="Typing...">
+                            <div id="icon">&#9787</div>
+                            <img src="img_Tuan04/send.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
